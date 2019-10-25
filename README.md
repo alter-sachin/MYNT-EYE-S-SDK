@@ -2,6 +2,34 @@
 
 [![](https://img.shields.io/badge/MYNT%20EYE%20S%20SDK-2.4.2-brightgreen.svg?style=flat)](https://github.com/slightech/MYNT-EYE-S-SDK)
 
+## TO BUILD PLEASE DO THE FOLLOWING :::
+
+HAVE A VERSION OF BOOST PYTHON 1.71.0 
+To install boost please visit the following link.
+
+https://www.boost.org/doc/libs/1_71_0/more/getting_started/unix-variants.html
+
+
+A few pointers. 
+in step ./bootstrap.sh  use the with-python tag and with libraries tag to install this
+for your version of python.
+
+./bootstrap.sh --with-python-version=3.6 --with-libraries=python
+
+./b2 install
+
+Now to build MYNT-sdk go to the MYNT directory and run
+
+Remove previous build traces:
+rm -rf _output/ _build/ wrappers/python/_build/ wrappers/python/_install/ wrappers/python/_output/
+
+
+and then : 
+make python
+
+
+
+
 ## Overview
 
 MYNT® EYE S SDK is a cross-platform library for MYNT® EYE Standard cameras.
