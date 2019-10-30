@@ -446,7 +446,8 @@ BOOST_PYTHON_MODULE(mynteye_py) {
           "enable_motion_datas", &APIWrap::EnableMotionDatas,
           (bp::arg("max_size") = std::numeric_limits<std::size_t>::max()))
       .def("get_motion_datas", get_motion_datas)
-      .def("enable_plugin", &APIWrap::EnablePlugin);
+      .def("enable_plugin", &APIWrap::EnablePlugin)
+      .def("config_disparity",&APIWrap::ConfigDisparityFromFile);
 
   bp::register_ptr_to_python<std::shared_ptr<APIWrap>>();
 
